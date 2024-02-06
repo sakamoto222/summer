@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/* 全体のスタイル */
+body {
+    font-family: Arial, sans-serif; /* フォントファミリーを指定 */
+    background-color: #f8f8f8; /* 背景色を指定 */
+    margin: 0; /* 余白をなくす */
+    padding: 0; /* パディングをなくす */
+}
+
+/* コンテンツのスタイル */
+.contact {
+    max-width: 600px; /* コンテンツの最大幅を指定 */
+    margin: 50px auto; /* 上下に余白を持たせ、中央に配置 */
+    background-color: #fff; /* 背景色を指定 */
+    padding: 20px; /* 内側の余白を指定 */
+    border-radius: 10px; /* 角丸にする */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 影をつける */
+}
+
+/* タイトルのスタイル */
+h1 {
+    text-align: center; /* 中央揃え */
+    color: #333; /* タイトルの色を指定 */
+}
+
+/* 入力エリアのスタイル */
+.inputarea {
+    margin-bottom: 20px; /* 下部に余白を持たせる */
+}
+
+/* 入力フィールドのスタイル */
+.input {
+    width: 60%; /* 幅を60%にする */
+    padding: 10px; /* 内側の余白を指定 */
+    border: 1px solid #ccc; /* ボーダーを指定 */
+    border-radius: 5px; /* 角丸にする */
+}
+
+/* ボタンエリアのスタイル */
+.buttonarea {
+    text-align: center; /* 中央揃え */
+}
+
+/* ボタンのスタイル */
+.button {
+    display: inline-block; /* ボタンをインラインブロック要素として表示 */
+    margin-right: 10px; /* ボタン間の右マージンを指定 */
+}
+
+/* ボタンのスタイル */
+.button input[type="submit"],
+.button input[type="button"] {
+    background-color: #ff9999; /* 背景色を指定 */
+    color: #fff; /* テキスト色を指定 */
+    border: none; /* ボーダーをなくす */
+    padding: 10px 20px; /* 内側の余白を指定 */
+    border-radius: 5px; /* 角丸にする */
+    cursor: pointer; /* マウスカーソルを指定 */
+    transition: background-color 0.3s; /* ホバー時のトランジションを指定 */
+}
+
+/* ボタンのホバー時のスタイル */
+.button input[type="submit"]:hover,
+.button input[type="button"]:hover {
+    background-color: #ff6666; /* ホバー時の背景色を指定 */
+}
