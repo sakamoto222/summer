@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Tracker</title>
+    <!-- Bootstrap CSS  -->
+    <!-- ウェブページやアプリケーションのデザインやスタイルを改善できる -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h1>睡眠チェッカ-</h1>
+    <!-- flaskから受け取ったデータを表示 -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <!-- 睡眠データフォーム -->
+    <form action="/submit" method="post">
+        <div class="form-group">
+            <!-- ニックネームを入力してもらう -->
+            <label for="nickname">ニックネーム:</label>
+            <input type="text" class="form-control" id="nickname" name="nickname" required>
+        </div>
+        <!-- 睡眠時間の入力 -->
+        <div class="form-group">
+            <label for="sleep_time">睡眠時間 (時間):</label>
+            <input type="number" class="form-control" id="sleep_time" name="sleep_time" required>
+        </div>
+        <!-- 起床時の気分を10段階で評価 -->
+        <div class="form-group">
+            <label for="wakeup_mood">起床時の気分 (1-10):</label>
+            <input type="number" class="form-control" id="wakeup_mood" name="wakeup_mood" required>
+        </div>
+        <!-- ボタンを押して送信 -->
+        <button type="submit" class="btn btn-primary">送信</button>
+    </form>
+
+    <!-- グラフ表示ボタン -->
+    <a href="graph" class="btn btn-info mt-3">1カ月の折れ線グラフを表示</a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

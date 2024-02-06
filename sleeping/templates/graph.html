@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1カ月の睡眠時間推移</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h1 class="mb-4">1カ月の睡眠時間推移</h1>
+
+    <!-- グラフ画像の表示 -->
+    <div class="card">
+        <div class="card-body">
+            <img src="data:image/png;base64,{{ plot_url }}" alt="1カ月の睡眠時間推移" class="img-fluid">
+        </div>
+    </div>
+
+    <!-- ホームに戻るボタン -->
+    <a href="/" class="btn btn-primary mt-3">ホームに戻る</a>
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
